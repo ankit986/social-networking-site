@@ -64,17 +64,6 @@ body {
 	z-index: 2;
 }
 
-.search-box{	
-	border:1px solid grey;
-	width:25vw;
-	margin:0;
-	display:flex;
-	position: absolute;
-	border-radius: 15px;
-	height:30px;
-	padding: 5px;
-}
-
 .icon{
 	width:5%;
 	margin:auto;
@@ -119,12 +108,11 @@ body {
 }
 
 .news-feed .container{
-	width:68%;
+	width:55%;
 	margin: auto;
 	text-align: center;
 	display: grid;
-	grid-template-columns: 7fr 4fr;
-	grid-gap:3vw;
+	grid-template-columns: 1fr;
 }
 
 .user-feed .feed{
@@ -134,7 +122,6 @@ body {
 	border-radius: 10px;
 	transition: all .2s ease-in-out;
 	background :#1a1a1b;
-
 }
 
 .user-feed .host-info{
@@ -162,73 +149,6 @@ body {
 	position: absolute;
 	right:5px;
 	top:20%
-}
-
-.other-feeds{
-	border:1px solid grey;
-	border-radius: 15px;
-	margin-top: 3vh;
-	width: 21vw;
-	height: 200px;
-	overflow-x: hidden; 
-	overflow-x: auto; 
-}
-
-.other-feeds .heading{
-	display: flex;
-	position: fixed;
-	padding: 5px;
-	width:270px;
-	background: var(--dark-color);
-}
-
-.other-feeds .heading  h4{
-	padding:10px;	
-}
-
-.other-feeds .data{
-	position: relative;
-    top: 40px;
-    z-index: -1;
-}
-
-.other-feeds .name{
-	padding-left:15px;
-}
-
-.other-feeds .rows{
-	padding:10px; 
-	display:flex;
-}
-
-.other-feeds .rows .story-image{
-	width:32px;
-	height: 32px;
-	border-radius:100%
-}
-
-.other-feeds .rows .time{
-	font-size: 0.8rem;
-}
-
-.most-famous{
-	height: 310px;
-}
-
-.most-famous .top5{
-	position: relative;
-    top: 40px;
-    z-index: -1;
-}
-
-.most-famous .rows{
-	align-items: center;
-}
-
-.most-famous .rows span{
-	text-align: right;
-	width: 20px;
-			padding:0 20px 0 10px;
 }
 
 .host-post{
@@ -285,7 +205,6 @@ body {
 .feed:hover {
 	border:1px solid rgb(242, 255, 186);
 	opacity: 0.9;
-	transform: scale(1.001)
 }
 
 a:hover{
@@ -293,4 +212,25 @@ a:hover{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+}
+
+@media(max-width: 768px) {
+	.news-feed .container {
+		width: 100%;
+		margin: auto;
+		overflow: hidden;
+		padding: 0 2rem;
+	}
+
+	.host-info{
+		font-size: 35px
+	}
+
+	.more-dots{
+		font-size:12px;
+	}
+
+	.l-c-s{
+		font-size: 12px;
+	}
 }
