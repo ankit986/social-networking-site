@@ -1,0 +1,296 @@
+:root {
+	--primary-color: #d7dadc;
+	--dark-color: #030303;
+	--light-color: #f4f4f4;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+	color:var(--primary-color);
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	background: #030303;
+	color: #999;
+}
+
+.showcase{
+	width:100%;
+	position: fixed;
+	z-index: 1;
+	background: url('../assets/image/3.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(55, 0, 0, 0.01);
+	box-shadow: inset 10px 10px 25px #000000, inset -10px -10px 25px #000000;
+}
+
+.showcase-top h1{
+	font-weight: 400;
+	font-size: 2.2rem;
+	position: relative;
+	text-align: center;
+	color:white;
+	z-index:2;
+	top:50%;
+	left:50%;
+	transform: translate(-50%);
+	margin-left: 0;
+}
+
+.navbar{
+	position: relative;
+	margin: auto;
+	color:var(--primary-color);
+	width:80%;
+	padding:10px 0px;
+	height: 45px;
+	justify-content: center;
+	z-index: 2;
+}
+
+.search-box{	
+	border:1px solid grey;
+	width:25vw;
+	margin:0;
+	display:flex;
+	position: absolute;
+	border-radius: 15px;
+	height:30px;
+	padding: 5px;
+}
+
+.icon{
+	width:5%;
+	margin:auto;
+}	
+
+.search-box input{
+	outline: none;
+	padding: 5px;
+	background: none;
+	width: 100%;
+	margin:0;
+	border: none;
+	color: var(--light-color);	
+}
+
+.user-details{
+	position: absolute;
+	right:0;
+	margin-right: 0;
+}
+.user-details img{
+	border-radius: 50%;
+	width:15%;
+	height:100%;
+	padding: 1px;
+}
+
+.user-details a{
+	position:  absolute;
+	margin-top: 8px;
+	padding-left: 5px;
+}
+
+.news-feed{
+	position: relative;
+	top:105px;
+}
+
+.news-feed p{
+	text-align: justify;
+	padding:0 15px;
+}
+
+.news-feed .container{
+	width:68%;
+	margin: auto;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 7fr 4fr;
+	grid-gap:3vw;
+}
+
+.user-feed .feed{
+	grid-template-rows: 1fr 2fr 1fr;
+	border:1px solid grey;
+	margin-top: 3vh;
+	border-radius: 10px;
+	transition: all .2s ease-in-out;
+	background :#1a1a1b;
+
+}
+
+.user-feed .host-info{
+	display: flex;
+}
+
+.host-info{
+	position: relative;
+	padding:5px;
+	border-bottom: 1px solid grey;
+}
+
+.host-info img{
+	width:40px;
+	padding:5px;
+	border-radius: 50%
+}
+
+.host-info a{
+	margin:auto 5px;
+	border-radius: 5px;
+}
+
+.host-info .more-dots{
+	position: absolute;
+	right:5px;
+	top:20%
+}
+
+.other-feeds{
+	border:1px solid grey;
+	border-radius: 15px;
+	margin-top: 3vh;
+	width: 21vw;
+	height: 200px;
+	overflow-x: hidden; 
+	overflow-x: auto; 
+}
+
+.other-feeds .heading{
+	display: flex;
+	position: fixed;
+	padding: 5px;
+	width:270px;
+	background: var(--dark-color);
+}
+
+.other-feeds .heading  h4{
+	padding:10px;	
+}
+
+.other-feeds .data{
+	position: relative;
+    top: 40px;
+    z-index: -1;
+}
+
+.other-feeds .name{
+	padding-left:15px;
+}
+
+.other-feeds .rows{
+	padding:10px; 
+	display:flex;
+}
+
+.other-feeds .rows .story-image{
+	width:32px;
+	height: 32px;
+	border-radius:100%
+}
+
+.other-feeds .rows .time{
+	font-size: 0.8rem;
+}
+
+.most-famous{
+	height: 310px;
+}
+
+.most-famous .top5{
+	position: relative;
+    top: 40px;
+    z-index: -1;
+}
+
+.most-famous .rows{
+	align-items: center;
+}
+
+.most-famous .rows span{
+	text-align: right;
+	width: 20px;
+			padding:0 20px 0 10px;
+}
+
+.host-post{
+	border-bottom: 1px solid grey;
+}
+
+.host-post .caption{
+	margin-bottom:8px ; 
+	margin-top:8px;
+}
+
+.host-post img{
+	width:100%;
+	max-height: 70vh
+
+}
+
+.l-c-s{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	align-items: center;
+	padding:5px;
+	margin:10px;
+	font-size: 1.1rem;
+}
+
+.like , .comment, .share{
+	padding:5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.l-c-s img{
+	width:20px;
+}
+
+.like-icon{
+	background: url('../assets/image/6.jpg') no-repeat center center/cover;
+}
+
+.liked{
+	font-weight: 400;
+	background: -webkit-linear-gradient(#f12711, #f5af19);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	transform: scale(2);
+  
+} 
+
+.like:hover{
+	transform: scale(1.5);
+}
+
+.feed:hover {
+	border:1px solid rgb(242, 255, 186);
+	opacity: 0.9;
+	transform: scale(1.001)
+}
+
+a:hover{
+	background: -webkit-linear-gradient(#f12711, #f5af19);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
